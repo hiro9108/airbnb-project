@@ -3,9 +3,14 @@
 > ## Front End
 
 - React
+
   - Next.js
   - TypeScript
   - Redux(toolkit)
+
+- CSS Framework
+  - TailwindCSS
+  - (Install emotion for using vanila css)
 
 > ## Back End
 
