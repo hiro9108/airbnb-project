@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply select-none;
+  }
+}
+
+@layer components {
+  .navbar {
+    @apply w-screen max-h-20 px-10
+    flex flex-row justify-between;
+  }
+  .seach_wrapper {
+    @apply w-screen mt-6 flex justify-center;
+  }
+  .search_container {
+    @apply relative border border-solid border-gray-500
+    py-1 px-3 rounded-3xl h-8 w-72 overflow-hidden;
+  }
+  .search_text {
+    @apply border-none h-6 focus:outline-none;
+  }
+  .submit {
+    @apply cursor-pointer text-sm text-red-200 border-none bg-none
+    absolute w-5 right-2 top-1 outline-none;
+  }
+  .card_wrapper {
+    @apply relative mx-auto overflow-hidden rounded-lg mt-10;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  .input_wrapper {
+    @apply flex flex-col p-2 pb-1 mb-2
+    border border-solid border-gray-500 rounded-lg;
+  }
+}
