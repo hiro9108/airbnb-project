@@ -1,10 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
+import Link from "next/link";
+
 import Hotel from "../components/home/Hotel";
 import Search from "../components/home/Search";
 import Layout from "../components/layout";
-import Navbar from "../components/navbar/navbar";
-import styles from "../styles/Home.module.css";
+import { HOTEL_DATA } from "./post/hotelData";
 
 export default function Home() {
   const description: string = "Airbon home page";
@@ -13,7 +12,9 @@ export default function Home() {
   return (
     <Layout description={description} title={title}>
       <Search />
-      <Hotel />
+      <Link href="/booking">
+        <Hotel data={HOTEL_DATA} />
+      </Link>
     </Layout>
   );
 }

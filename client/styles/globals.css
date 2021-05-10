@@ -28,7 +28,7 @@
     absolute w-5 right-2 top-1 outline-none;
   }
   .card_wrapper {
-    @apply relative mx-auto overflow-hidden rounded-lg  mt-10;
+    @apply relative mx-auto overflow-hidden rounded-lg mt-10;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
   .input_wrapper {
