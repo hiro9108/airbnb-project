@@ -10,14 +10,13 @@ const BookingContainer = () => {
   const [guest, setGuest] = useState(1);
 
   const handleMinus = () => {
-    if (guest === 1) {
-      setGuest(1);
-    } else {
-      setGuest(guest - 1);
-    }
+    if (guest === 1) return;
+    setGuest(guest - 1);
   };
 
   const handlePlus = () => {
+    // Set maximum booking number
+    if (guest === 10) return;
     setGuest(guest + 1);
   };
 
@@ -43,14 +42,14 @@ const BookingContainer = () => {
             <div className="flex justify-center">
               <img
                 className="w-5"
-                onClick={() => handleMinus()}
+                onClick={handleMinus}
                 src="/minus-circle-solid.svg"
                 alt="minus"
               />
               <div className="px-4 text-lg">{guest}</div>
               <img
                 className="w-5"
-                onClick={() => handlePlus()}
+                onClick={handlePlus}
                 src="/plus-circle-solid.svg"
                 alt="plus"
               />
