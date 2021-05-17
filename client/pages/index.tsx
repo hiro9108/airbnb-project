@@ -13,7 +13,9 @@ export default function Home() {
     <Layout description={description} title={title}>
       <Search />
       <Link href="/booking">
-        <Hotel data={HOTEL_DATA} />
+        <a>
+          <Hotel data={HOTEL_DATA} />
+        </a>
       </Link>
     </Layout>
   );
