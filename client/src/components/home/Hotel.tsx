@@ -1,14 +1,32 @@
-import React, { FC } from "react";
-import { data } from "../../pages/post/hotelData";
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { data } from "../../../src/types";
+import { selectSearchItem } from "../../features/searchSlice";
 
 type dataProps = {
   data: data[];
 };
 
 const Hotel: React.FC<dataProps> = ({ data }) => {
+  const searchItem = useSelector(selectSearchItem);
+
+  const filterData = (arr) => {
+    if (searchItem) {
+      return arr.filter((item) => {
+        if (item.name.toLowerCase().includes(searchItem.toLowerCase())) {
+          return 1;
+        } else {
+          return 0;
+        }
+      });
+    } else {
+      return arr;
+    }
+  };
+
   return (
     <div className="flex flex-wrap justify-center mx-20">
-      {data.map((hotel) => {
+      {filterData(data).map((hotel) => {
         return (
           <div
             id={`${hotel.id}`}
@@ -22,7 +40,7 @@ const Hotel: React.FC<dataProps> = ({ data }) => {
               <div className="px-6">
                 <p className="text-sm text-gray-400">{hotel.location}</p>
                 <p className="py-6 text-right text-lg font-bold">
-                  CA ${hotel.price}{" "}
+                  CA ${hotel.price}
                   <span className="text-xs text-gray-400">/per night</span>
                 </p>
               </div>

@@ -1,8 +1,5 @@
 import React from "react";
-
-type buttonProp = {
-  button: string;
-};
+import { buttonProp } from "../../../src/types";
 
 const Button: React.FC<buttonProp> = ({ button }) => {
   return (

@@ -1,11 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Navbar from "./navbar/Navbar";
-
-type metaProps = {
-  description: string;
-  title: string;
-};
+import { metaProps } from "../../src/types";
 
 const Layout: React.FC<metaProps> = ({ description, title, children }) => {
   return (

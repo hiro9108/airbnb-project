@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { Provider } from "react-redux";
+import { store } from "../app/store";
 
 import Hotel from "../components/home/Hotel";
 import Search from "../components/home/Search";
@@ -10,11 +12,13 @@ export default function Home() {
   const title = "Airbnb home page";
 
   return (
-    <Layout description={description} title={title}>
-      <Search />
-      <Link href="/booking">
-        <Hotel data={HOTEL_DATA} />
-      </Link>
-    </Layout>
+    <Provider store={store}>
+      <Layout description={description} title={title}>
+        <Search />
+        <Link href="/booking">
+          <Hotel data={HOTEL_DATA} />
+        </Link>
+      </Layout>
+    </Provider>
   );
 }
