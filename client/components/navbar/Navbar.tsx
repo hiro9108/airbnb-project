@@ -9,7 +9,7 @@ const Navbar = () => {
           <img className="w-28" src="/logo2.png" />
         </a>
       </Link>
-      <Link href="/user">
+      <Link href="/user/signin">
         <a className="flex justify-center items-center">
           <img className="w-8 cursor-pointer" src="/user-solid.svg" />
         </a>
