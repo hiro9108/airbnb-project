@@ -17,7 +17,8 @@ module.exports = {
         lg: "34rem",
         xl: "36rem",
         xxl: "40rem",
-        xxxl: "70rem"
+        xxxl: "70rem",
+        xxxxl: "90rem",
       },
       width: {
         mds: "70vh",
@@ -27,7 +28,8 @@ module.exports = {
         lg: "34rem",
         xl: "36rem",
         xxl: "40rem",
-        xxxl: "50rem"
+        xxxl: "50rem",
+        xxxxl: "90rem",
       },
     },
     screens: {

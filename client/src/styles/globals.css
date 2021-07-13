@@ -42,10 +42,10 @@
   footer {
     @apply px-16 bg-gray-100 border-t border-gray-300 border-solid;
   }
+  a {
+    @apply underline;
+  }
 }
-/* h2 {
-  background-repeat: no-repeat
-} */
 
 @layer components {
   .navbar {
@@ -151,4 +151,26 @@
     @apply flex justify-between items-center text-sm font-light
     border-t border-gray-300 border-solid h-20;
   }
+  .room_detail {
+    @apply mx-28 my-16;
+  }
+  .h_d_icon {
+    @apply text-sm border-b border-gray-800 border-solid ml-2;
+  }
+  .show_all_photos {
+    @apply flex border border-gray-800 border-solid rounded-md
+    bg-white text-gray-800 absolute bottom-4 right-7
+    py-2 px-3;
+  }
+  .d_c_section {
+    @apply py-6 border-b border-solid border-gray-200;
+  }
+  .submit_btn {
+    @apply bg-pink text-lg text-white rounded-lg
+    font-medium w-72 h-14 cursor-pointer;
+  }
+}
+
+.detail_content {
+  display: grid;
 }

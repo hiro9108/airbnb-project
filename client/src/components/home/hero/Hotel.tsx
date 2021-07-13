@@ -30,6 +30,7 @@ const Hotel: React.FC<dataProps> = ({ data }) => {
         return (
           <div
             id={`${hotel.id}`}
+            key={`${hotel.id}`}
             className="card_wrapper w-72 cursor-pointer mx-6"
           >
             <article className="bg-white">
