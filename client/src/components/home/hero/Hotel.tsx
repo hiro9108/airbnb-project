@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { data } from "../../../src/types";
-import { selectSearchItem } from "../../features/searchSlice";
+import { data } from "../../../types";
+import { selectSearchItem } from "../../../features/searchSlice";
 
 type dataProps = {
   data: data[];
