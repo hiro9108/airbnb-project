@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { setSearchItem } from "../../features/searchSlice";
+import { setSearchItem } from "../../../features/searchSlice";
 
 const Search = () => {
   const dispatch = useDispatch();
