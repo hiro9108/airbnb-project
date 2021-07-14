@@ -7,15 +7,8 @@ import {
   faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import UserDropDown from "./UserDropDown";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const isClicked = () => {
-    setIsOpen(true);
-  };
-
   return (
     <div className="navbar">
       <div className="cursor-pointer">
@@ -35,7 +28,7 @@ const Navbar = () => {
         <div className="px-4">
           <FontAwesomeIcon icon={faGlobe} size="sm" />
         </div>
-        <div className="navbar_user" onClick={isClicked}>
+        <div className="navbar_user">
           <div className="mr-3 flex items-center">
             <FontAwesomeIcon icon={faBars} size="sm" />
           </div>
