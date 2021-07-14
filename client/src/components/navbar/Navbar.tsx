@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import Link from "next/link";
-
 import {
   faBars,
   faUserCircle,
   faGlobe,
+  faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { signIn, signOut, useSession } from "next-auth/client";
 
 const Navbar = () => {
+  const [session, loading] = useSession();
+
   return (
     <div className="navbar">
       <div className="cursor-pointer">
@@ -33,11 +36,18 @@ const Navbar = () => {
             <FontAwesomeIcon icon={faBars} size="sm" />
           </div>
           <div>
-            <FontAwesomeIcon icon={faUserCircle} size="lg" className="" />
+            {!session ? (
+              <button onClick={() => signIn("cognito")}>
+                <FontAwesomeIcon icon={faUserCircle} size="lg" className="" />
+              </button>
+            ) : (
+              <button onClick={() => signOut()}>
+                <FontAwesomeIcon icon={faSignOutAlt} size="lg" className="" />
+              </button>
+            )}
           </div>
         </div>
       </div>
-      {isOpen ? <UserDropDown /> : null}
     </div>
   );
 };
