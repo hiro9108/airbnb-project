@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 import {
@@ -7,8 +7,15 @@ import {
   faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import UserDropDown from "./UserDropDown";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const isClicked = () => {
+    setIsOpen(true);
+  };
+
   return (
     <div className="navbar">
       <div className="cursor-pointer">
@@ -28,17 +35,16 @@ const Navbar = () => {
         <div className="px-4">
           <FontAwesomeIcon icon={faGlobe} size="sm" />
         </div>
-        <div className="navbar_user">
+        <div className="navbar_user" onClick={isClicked}>
           <div className="mr-3 flex items-center">
             <FontAwesomeIcon icon={faBars} size="sm" />
           </div>
           <div>
-            <Link href="/user/signin">
-              <FontAwesomeIcon icon={faUserCircle} size="lg" className="" />
-            </Link>
+            <FontAwesomeIcon icon={faUserCircle} size="lg" className="" />
           </div>
         </div>
       </div>
+      {isOpen ? <UserDropDown /> : null}
     </div>
   );
 };

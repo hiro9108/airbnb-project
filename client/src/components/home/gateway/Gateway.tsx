@@ -8,7 +8,9 @@ const Gateway = () => {
     <section className="mb-16">
       <h3 className="font-semibold mt-10">Inspiration for future getaways</h3>
       <div className="flex border-b-2 border-solid border-gray-300">
-        <div className="distinations">Lake Distinations</div>
+        <div className="distinations border-b-2 border-gray-600 border-solid">
+          Lake Distinations
+        </div>
         <div className="distinations">Mountain Distinations</div>
         <div className="distinations">Coastal Distinations</div>
         <div className="distinations">Island Distinations</div>
