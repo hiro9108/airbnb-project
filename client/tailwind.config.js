@@ -17,17 +17,21 @@ module.exports = {
         lg: "34rem",
         xl: "36rem",
         xxl: "40rem",
-        xxxl: "70rem"
+        xxxl: "70rem",
+        xxxxl: "90rem",
       },
       width: {
-        mds: "70vh",
-        lgs: "90vh",
+        xss: "40vw",
+        sms: "60vw",
+        mds: "70vw",
+        lgs: "90vw",
         sm: "28rem",
         md: "32rem",
         lg: "34rem",
         xl: "36rem",
         xxl: "40rem",
-        xxxl: "50rem"
+        xxxl: "50rem",
+        xxxxl: "90rem",
       },
     },
     screens: {

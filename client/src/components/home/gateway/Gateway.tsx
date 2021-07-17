@@ -1,30 +1,115 @@
 import React from "react";
-import { getAllGateways } from "./gateway-data";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+
+import {
+  getAllLakes,
+  getAllMountains,
+  getAllCoastals,
+  getAllIslands,
+  getAllOutdoors,
+  getAllOthers,
+} from "./gateway-data";
 
 const Gateway = () => {
-  const gateways = getAllGateways();
+  const lakes = getAllLakes();
+  const mountains = getAllMountains();
+  const coastals = getAllCoastals();
+  const islands = getAllIslands();
+  const outdoors = getAllOutdoors();
+  const others = getAllOthers();
 
   return (
     <section className="mb-16">
       <h3 className="font-semibold mt-10">Inspiration for future getaways</h3>
-      <div className="flex border-b-2 border-solid border-gray-300">
-        <div className="distinations">Lake Distinations</div>
-        <div className="distinations">Mountain Distinations</div>
-        <div className="distinations">Coastal Distinations</div>
-        <div className="distinations">Island Distinations</div>
-        <div className="distinations">Outdoor Distinations</div>
-        <div className="distinations">Other Popular Distinations</div>
-      </div>
-      <div className="grid grid-flow-row grid-cols-4 gap-5 mt-5">
-        {gateways.map((gateway, index) => {
-          return (
-            <div key={index} className="font-light cursor-pointer">
-              <h6>{gateway.area}</h6>
-              <h6 className="text-gray-500">{gateway.city}</h6>
-            </div>
-          );
-        })}
-      </div>
+      <Tabs>
+        <TabList className="flex border-b-2 border-solid border-gray-300">
+          <Tab className="distinations">Lake Distinations</Tab>
+          <Tab className="distinations">Mountain Distinations</Tab>
+          <Tab className="distinations">Coastal Distinations</Tab>
+          <Tab className="distinations">Island Distinations</Tab>
+          <Tab className="distinations">Outdoor Distinations</Tab>
+          <Tab className="distinations">Other Popular Distinations</Tab>
+        </TabList>
+
+        <TabPanel>
+          <div className="grid grid-flow-row grid-cols-4 gap-5 mt-5">
+            {lakes.map((lake, index) => {
+              return (
+                <div key={index} className="font-light cursor-pointer">
+                  <h6>{lake.area}</h6>
+                  <h6 className="text-gray-500">{lake.city}</h6>
+                </div>
+              );
+            })}
+          </div>
+        </TabPanel>
+
+        <TabPanel>
+          <div className="grid grid-flow-row grid-cols-4 gap-5 mt-5">
+            {mountains.map((mountain, index) => {
+              return (
+                <div key={index} className="font-light cursor-pointer">
+                  <h6>{mountain.area}</h6>
+                  <h6 className="text-gray-500">{mountain.city}</h6>
+                </div>
+              );
+            })}
+          </div>
+        </TabPanel>
+
+        <TabPanel>
+          <div className="grid grid-flow-row grid-cols-4 gap-5 mt-5">
+            {coastals.map((coastal, index) => {
+              return (
+                <div key={index} className="font-light cursor-pointer">
+                  <h6>{coastal.area}</h6>
+                  <h6 className="text-gray-500">{coastal.city}</h6>
+                </div>
+              );
+            })}
+          </div>
+        </TabPanel>
+
+        <TabPanel>
+          <div className="grid grid-flow-row grid-cols-4 gap-5 mt-5">
+            {islands.map((island, index) => {
+              return (
+                <div key={index} className="font-light cursor-pointer">
+                  <h6>{island.area}</h6>
+                  <h6 className="text-gray-500">{island.city}</h6>
+                </div>
+              );
+            })}
+          </div>
+        </TabPanel>
+
+        <TabPanel>
+          <div className="grid grid-flow-row grid-cols-4 gap-5 mt-5">
+            {outdoors.map((outdoor, index) => {
+              return (
+                <div key={index} className="font-light cursor-pointer">
+                  <h6>{outdoor.area}</h6>
+                  <h6 className="text-gray-500">{outdoor.city}</h6>
+                </div>
+              );
+            })}
+          </div>
+        </TabPanel>
+
+        <TabPanel>
+          <div className="grid grid-flow-row grid-cols-4 gap-5 mt-5">
+            {others.map((other, index) => {
+              return (
+                <div key={index} className="font-light cursor-pointer">
+                  <h6>{other.area}</h6>
+                  <h6 className="text-gray-500">{other.city}</h6>
+                </div>
+              );
+            })}
+          </div>
+        </TabPanel>
+      </Tabs>
     </section>
   );
 };

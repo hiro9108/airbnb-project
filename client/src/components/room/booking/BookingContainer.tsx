@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import Button from "../UIkit/Button";
+import { faPlusCircle, faMinusCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import Button from "../../UIkit/Button";
 
 const BookingContainer = () => {
   // let date = new Date();
@@ -21,7 +24,7 @@ const BookingContainer = () => {
   };
 
   return (
-    <div className="card_wrapper w-96 py-6">
+    <div className="card_wrapper w-96 py-6 h-80">
       <article className="bg-white">
         <div className="flex justify-center">
           <p className="pb-6 font-bold">Booking</p>
@@ -39,25 +42,29 @@ const BookingContainer = () => {
           </div>
           <div className="py-2 p-2">
             <label className="text-xs">GUESTS</label>
-            <div className="flex justify-center">
-              <img
-                className="w-5"
+            <div className="flex justify-center items-center">
+              <FontAwesomeIcon
+                icon={faMinusCircle}
+                size="sm"
                 onClick={handleMinus}
-                src="/minus-circle-solid.svg"
-                alt="minus"
+                className="cursor-pointer"
               />
               <div className="px-4 text-lg">{guest}</div>
-              <img
-                className="w-5"
+              <FontAwesomeIcon
+                icon={faPlusCircle}
+                size="sm"
                 onClick={handlePlus}
-                src="/plus-circle-solid.svg"
-                alt="plus"
+                className="cursor-pointer"
               />
             </div>
           </div>
         </div>
         <div className="flex justify-center mt-5">
-          <Button button="SEND" />
+          <input
+            className="submit_btn"
+            type="submit"
+            value="check availability"
+          />
         </div>
       </article>
     </div>
