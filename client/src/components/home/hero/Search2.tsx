@@ -6,10 +6,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { useForm } from "react-hook-form";
+
 const Search2 = () => {
   const [guest, setGuest] = useState(1);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  const submit = () => {};
+  const onSubmit = (data) => console.log(data);
 
   const handleMinus = () => {
     if (guest === 1) return;
@@ -23,12 +30,17 @@ const Search2 = () => {
   };
   return (
     <div className="flex justify-center mt-7">
-      <form onSubmit={submit} encType="multiple/form-data" className="s_form">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        encType="multiple/form-data"
+        className="s_form"
+      >
         <div className="s_input_wrapper pr-12 ">
           <label className="s_label">Location</label>
           <input
+            {...register("location")}
             className="s_input_placeholder"
-            type="location"
+            type="text"
             id="location"
             name="location"
             placeholder="Where are you going?"
@@ -38,6 +50,7 @@ const Search2 = () => {
         <div className="s_input_wrapper">
           <label className="s_label">Check in</label>
           <input
+            {...register("checkin")}
             className="s_input_placeholder"
             type="date"
             id="checkin"
@@ -49,6 +62,7 @@ const Search2 = () => {
         <div className="s_input_wrapper">
           <label className="s_label">Check out</label>
           <input
+            {...register("checkout")}
             className="s_input_placeholder"
             type="date"
             id="checkout"
