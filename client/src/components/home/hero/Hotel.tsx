@@ -39,10 +39,10 @@ const Hotel: React.FC<dataProps> = ({ data }) => {
                 <img src={hotel.imageUrl} alt="thum" className="w-auto" />
               </div>
               <div className="px-6">
-                <p className="text-sm text-gray-400">{hotel.location}</p>
+                <p className="text-sm text-gray-500">{hotel.location}</p>
                 <p className="py-6 text-right text-lg font-bold">
                   CA ${hotel.price}
-                  <span className="text-xs text-gray-400">/per night</span>
+                  <span className="text-xs text-gray-500">/per night</span>
                 </p>
               </div>
             </article>

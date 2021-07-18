@@ -5,7 +5,7 @@ const City = () => {
   const cities = getAllCities();
 
   return (
-    <div className="grid grid-flow-row grid-cols-4 grid-rows-2 gap-4">
+    <div className="city">
       {cities.map((city, index) => {
         return (
           <div key={index} className="flex cursor-pointer">

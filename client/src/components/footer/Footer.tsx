@@ -15,46 +15,54 @@ const Footer = () => {
 
   return (
     <footer>
-      <div className="grid grid-flow-row grid-cols-4 gap-4 mt-10">
-        <div>
+      <div className="footer_lists">
+        <div className="f_links_block">
           <p className="f_link_title">ABOUT</p>
-          {abouts.map((about, index) => {
-            return (
-              <div key={index} className="f_links">
-                {about.title}
-              </div>
-            );
-          })}
+          <div className="f_links_wrapper">
+            {abouts.map((about, index) => {
+              return (
+                <div key={index} className="f_links">
+                  {about.title}
+                </div>
+              );
+            })}
+          </div>
         </div>
-        <div>
+        <div className="f_links_block">
           <p className="f_link_title">COMMUNITY</p>
-          {communities.map((community, index) => {
-            return (
-              <div key={index} className="f_links">
-                {community.title}
-              </div>
-            );
-          })}
+          <div className="f_links_wrapper">
+            {communities.map((community, index) => {
+              return (
+                <div key={index} className="f_links">
+                  {community.title}
+                </div>
+              );
+            })}
+          </div>
         </div>
-        <div>
+        <div className="f_links_block">
           <p className="f_link_title">HOST</p>
-          {hosts.map((host, index) => {
-            return (
-              <div key={index} className="f_links">
-                {host.title}
-              </div>
-            );
-          })}
+          <div className="f_links_wrapper">
+            {hosts.map((host, index) => {
+              return (
+                <div key={index} className="f_links">
+                  {host.title}
+                </div>
+              );
+            })}
+          </div>
         </div>
-        <div>
+        <div className="f_links_block">
           <p className="f_link_title">SUPPORT</p>
-          {suppports.map((support, index) => {
-            return (
-              <div key={index} className="f_links">
-                {support.title}
-              </div>
-            );
-          })}
+          <div className="f_links_wrapper">
+            {suppports.map((support, index) => {
+              return (
+                <div key={index} className="f_links">
+                  {support.title}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
       <FooterBar />

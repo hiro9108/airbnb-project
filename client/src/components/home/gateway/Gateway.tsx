@@ -23,7 +23,7 @@ const Gateway = () => {
     <section className="mb-16">
       <h3 className="font-semibold mt-10">Inspiration for future getaways</h3>
       <Tabs>
-        <TabList className="flex border-b-2 border-solid border-gray-300">
+        <TabList className="flex border-b-2 border-solid border-gray-300 overflow-x-scroll">
           <Tab className="distinations">Lake Distinations</Tab>
           <Tab className="distinations">Mountain Distinations</Tab>
           <Tab className="distinations">Coastal Distinations</Tab>
@@ -33,7 +33,7 @@ const Gateway = () => {
         </TabList>
 
         <TabPanel>
-          <div className="grid grid-flow-row grid-cols-4 gap-5 mt-5">
+          <div className="gateway_list">
             {lakes.map((lake, index) => {
               return (
                 <div key={index} className="font-light cursor-pointer">
@@ -46,7 +46,7 @@ const Gateway = () => {
         </TabPanel>
 
         <TabPanel>
-          <div className="grid grid-flow-row grid-cols-4 gap-5 mt-5">
+          <div className="gateway_list">
             {mountains.map((mountain, index) => {
               return (
                 <div key={index} className="font-light cursor-pointer">
@@ -59,7 +59,7 @@ const Gateway = () => {
         </TabPanel>
 
         <TabPanel>
-          <div className="grid grid-flow-row grid-cols-4 gap-5 mt-5">
+          <div className="gateway_list">
             {coastals.map((coastal, index) => {
               return (
                 <div key={index} className="font-light cursor-pointer">
@@ -72,7 +72,7 @@ const Gateway = () => {
         </TabPanel>
 
         <TabPanel>
-          <div className="grid grid-flow-row grid-cols-4 gap-5 mt-5">
+          <div className="gateway_list">
             {islands.map((island, index) => {
               return (
                 <div key={index} className="font-light cursor-pointer">
@@ -85,7 +85,7 @@ const Gateway = () => {
         </TabPanel>
 
         <TabPanel>
-          <div className="grid grid-flow-row grid-cols-4 gap-5 mt-5">
+          <div className="gateway_list">
             {outdoors.map((outdoor, index) => {
               return (
                 <div key={index} className="font-light cursor-pointer">
@@ -98,7 +98,7 @@ const Gateway = () => {
         </TabPanel>
 
         <TabPanel>
-          <div className="grid grid-flow-row grid-cols-4 gap-5 mt-5">
+          <div className="gateway_list">
             {others.map((other, index) => {
               return (
                 <div key={index} className="font-light cursor-pointer">

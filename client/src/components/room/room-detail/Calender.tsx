@@ -6,7 +6,7 @@ const Calender = () => {
   const [value2, onChange2] = useState(new Date());
 
   return (
-    <div className="flex">
+    <div className="flex overflow-x-scroll">
       <Calendar onChange={onChange} value={value} className="m-7" />
       <Calendar onChange={onChange2} value={value2} className="m-7" />
     </div>

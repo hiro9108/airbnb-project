@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Images = () => {
   return (
-    <div className="grid grid-flow-col grid-cols-2">
-      <div className="mr-4">
+    <div className="lg:grid grid-flow-col grid-cols-2">
+      <div className="lg:mr-4">
         <img src="rooms/livingroom.jpeg" alt="living" className="rounded-lg" />
       </div>
-      <div className="grid grid-flow-col grid-cols-2 grid-rows-2 gap-2">
+      <div className="hidden lg:grid grid-flow-col grid-cols-2 grid-rows-2 gap-2">
         <img
           src="rooms/bedroom.jpeg"
           alt="bedroom"
