@@ -1,5 +1,5 @@
 import React from "react";
-import BookingContainer from "../components/room/booking/BookingContainer";
+import BookingContainer from "../components/booking/BookingContainer";
 import Layout from "../components/layout";
 
 const Booking = () => {

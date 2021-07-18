@@ -12,14 +12,14 @@ const Top = () => {
       <h3>DOWNTOWN Room with Private Bathroom</h3>
       <div className="md:flex justify-between items-center my-4">
         <div className="md:flex items-center">
-          <div className="flex justify-center">
+          <div className="flex justify-center items-center">
             <FontAwesomeIcon icon={faStar} size="sm" className="text-pink" />
             <h6 className="mx-1">4.82</h6>
             <a href="">
               <span className="text-sm text-gray-500">(17 reviews)</span>
             </a>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center items-center">
             <span className="hidden md:block mx-3 text-gray-500">・</span>
             <a href="">
               <h6 className="text-sm text-gray-500">

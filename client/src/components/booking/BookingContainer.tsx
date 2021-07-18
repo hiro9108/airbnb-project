@@ -3,13 +3,18 @@ import { useForm } from "react-hook-form";
 import { faPlusCircle, faMinusCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Button from "../../UIkit/Button";
-
 const BookingContainer = () => {
-  // let date = new Date();
-  // let year = date.getFullYear();
-  // let month = date.getMonth() + 1;
-  // let day = date.getDate();
+  let today_d = new Date();
+  today_d.setDate(today_d.getDate());
+  let today = today_d.toISOString().substr(0, 10);
+
+  let tmr_d = new Date();
+  tmr_d.setDate(tmr_d.getDate() + 1);
+  let tmr = tmr_d.toISOString().substr(0, 10);
+
+  // var someDate = new Date();
+  // var numberOfDaysToAdd = 3;
+  // var today = someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
 
   const [guest, setGuest] = useState(1);
 
@@ -41,26 +46,38 @@ const BookingContainer = () => {
           <div className="flex flex-col border border-solid border-gray-500 rounded-lg mx-4">
             <div className="flex border-b border-solid border-gray-500">
               <div className="border-r border-solid border-gray-500 p-2">
-                <label className="text-xs ">CHECK-IN</label>
+                <label className="text-xs" htmlFor="checkin">
+                  CHECK-IN
+                </label>
+                {/* <input id="dateRequired" type="date" name="dateRequired"  /> */}
+
                 <input
                   {...register("checkin")}
                   className="md:w-20 lg:w-32 xl:w-40 bg-white text-sm"
+                  id="checkin today"
                   type="date"
-                  name="date"
+                  name="checkin"
+                  defaultValue={today}
                 />
               </div>
               <div className="p-2">
-                <label className="text-xs">CHECKOUT</label>
+                <label className="text-xs" htmlFor="checkout">
+                  CHECKOUT
+                </label>
                 <input
                   {...register("checkout")}
                   className="md:w-20 lg:w-32 w-40 bg-white text-sm"
+                  id="checkout"
                   type="date"
-                  name="date"
+                  name="checkout"
+                  defaultValue={tmr}
                 />
               </div>
             </div>
             <div className="py-2 p-2">
-              <label className="text-xs">GUESTS</label>
+              <label className="text-xs" htmlFor="guest">
+                GUESTS
+              </label>
               <div className="flex justify-center items-center">
                 <FontAwesomeIcon
                   icon={faMinusCircle}
@@ -68,7 +85,9 @@ const BookingContainer = () => {
                   onClick={handleMinus}
                   className="cursor-pointer"
                 />
-                <div className="px-4 text-lg">{guest}</div>
+                <div className="px-4 text-lg" id="guest">
+                  {guest}
+                </div>
                 <FontAwesomeIcon
                   icon={faPlusCircle}
                   size="sm"
