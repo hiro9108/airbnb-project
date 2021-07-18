@@ -3,7 +3,7 @@ import React from "react";
 const Inspire = () => {
   return (
     <section className="inspire">
-      <div className="ml-20 h-96 flex flex-col justify-center ">
+      <div className="lg:ml-20 h-96 flex flex-col justify-center">
         <h2 className="font-medium">
           The Greatest
           <br />

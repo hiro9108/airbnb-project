@@ -21,7 +21,9 @@ module.exports = {
         xxxxl: "90rem",
       },
       width: {
+        xsss: "30vw",
         xss: "40vw",
+        smss: "50vw",
         sms: "60vw",
         mds: "70vw",
         lgs: "90vw",

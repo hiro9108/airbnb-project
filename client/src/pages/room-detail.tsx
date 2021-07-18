@@ -1,5 +1,5 @@
 import React from "react";
-import RoomDetail from "../components/room/RoomDetail";
+import RoomDetail from "../components/room/room-detail/RoomDetail";
 
 const RoomDetailPage = () => {
   return (

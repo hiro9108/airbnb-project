@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const FooterBar = () => {
   return (
     <div className="footer_nav">
-      <div className="flex">
+      <div className="md:flex text-center">
         <div>&copy; 2021 Airbnb,Inc.</div>
         <ul className="flex list-disc">
           <li className="ml-6">Privacy</li>

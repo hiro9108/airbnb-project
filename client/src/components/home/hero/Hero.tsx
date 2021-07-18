@@ -11,6 +11,7 @@ const Hero = () => {
       {/* <Search /> */}
       {/* <Booking /> */}
       <Search2 />
+      <Search />
       <div className="hero_content">
         <div className="mb-6">
           <h4>Not sure where to go? Perfect.</h4>

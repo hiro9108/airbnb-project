@@ -19,13 +19,13 @@ const Navbar = () => {
           <img className="w-36" src="/logo2.png" />
         </Link>
       </div>
-      <div className="navbar_list">
+      <div className=" hidden lg:flex font-light">
         <h5 className="navbar_menu">Place to Stay</h5>
         <h5 className="navbar_menu">Experiences</h5>
         <h5 className="navbar_menu">Online Experiences</h5>
       </div>
       <div className="flex items-center justify-end">
-        <div>
+        <div className="hidden md:block">
           <h5>Become a Host</h5>
         </div>
         <div className="px-4">

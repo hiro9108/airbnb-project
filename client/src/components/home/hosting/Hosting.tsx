@@ -3,7 +3,7 @@ import React from "react";
 const Inspire = () => {
   return (
     <section className="hosting">
-      <div className="ml-20 h-96 flex flex-col justify-center ">
+      <div className="lg:ml-20 h-96 flex flex-col justify-center ">
         <h2 className="font-medium">Try hosting</h2>
         <h5 className="font-light">
           Earn extra income and unlock new

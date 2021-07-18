@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import {
-  faSearch,
-  faPlusCircle,
-  faMinusCircle,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPlusCircle, faMinusCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import searchIcon from "../../../../public/search-solid.svg";
+import "font-awesome/css/font-awesome.min.css";
 
 import { useForm } from "react-hook-form";
 
@@ -29,7 +27,7 @@ const Search2 = () => {
     setGuest(guest + 1);
   };
   return (
-    <div className="flex justify-center mt-7">
+    <div className="hidden md:flex justify-center mt-7 ">
       <form
         onSubmit={handleSubmit(onSubmit)}
         encType="multiple/form-data"
@@ -79,7 +77,7 @@ const Search2 = () => {
             name="guest"
             placeholder="Add guests"
           /> */}
-          <div className="flex items-center text-gray-700">
+          <div className="flex items-center text-gray-500">
             <FontAwesomeIcon
               icon={faMinusCircle}
               size="sm"
@@ -95,9 +93,8 @@ const Search2 = () => {
             />
           </div>
         </div>
-        <div className="s_btn">
-          <FontAwesomeIcon icon={faSearch} size="sm" />
-          {/* <input className="s_btn" type="submit" value="Add" /> */}
+        <div>
+          <input type="submit" value="&#xF002;" className="submit_btn" />
         </div>
       </form>
     </div>
