@@ -14,7 +14,7 @@ const Details = () => {
   const amenities = getAllAmenities();
 
   return (
-    <div className="">
+    <div>
       {/* top part */}
       <div className="flex justify-between mt-10 d_c_section ">
         <div>
@@ -25,7 +25,7 @@ const Details = () => {
             2 guests · 1 bedroom · 1 bed · 1 shared bath
           </h5>
         </div>
-        <div className="">
+        <div>
           <img
             src="rooms/person.jpeg"
             alt="owner"
@@ -37,7 +37,7 @@ const Details = () => {
       {/* second part */}
       <ul className="d_c_section">
         <li className="flex my-4">
-          <FontAwesomeIcon icon={faMapMarkerAlt} size="lg" className="" />
+          <FontAwesomeIcon icon={faMapMarkerAlt} size="lg" />
           <div className="ml-4">
             <h5 className="font-medium">Great Location</h5>
             <p className="text-gray-500">
@@ -46,7 +46,7 @@ const Details = () => {
           </div>
         </li>
         <li className="flex my-4">
-          <FontAwesomeIcon icon={faKey} size="lg" className="" />
+          <FontAwesomeIcon icon={faKey} size="lg" />
           <div className="ml-4">
             <h5 className="font-medium">Great check-in experience</h5>
             <p className="text-gray-500">
@@ -55,7 +55,7 @@ const Details = () => {
           </div>
         </li>
         <li className="flex my-3">
-          <FontAwesomeIcon icon={faBookmark} size="lg" className="" />
+          <FontAwesomeIcon icon={faBookmark} size="lg" />
           <div className="ml-4">
             <h5 className="font-medium">Wifi</h5>
             <p className="text-gray-500">
@@ -96,7 +96,7 @@ const Details = () => {
       <div className="d_c_section">
         <h4 className="font-medium mb-6">Places for sleeping</h4>
         <div className="border border-solid border-gray-300 p-9 w-56 rounded-xl">
-          <FontAwesomeIcon icon={faBed} size="lg" className="" />
+          <FontAwesomeIcon icon={faBed} size="lg" />
           <h5 className="mt-4 mb-1">Bedroom 1</h5>
           <h6>1 queen bed</h6>
         </div>
@@ -109,7 +109,7 @@ const Details = () => {
           {amenities.map((amenity, index) => {
             return (
               <div className="flex my-3" key={index}>
-                <FontAwesomeIcon icon={amenity.icon} size="lg" className="" />
+                <FontAwesomeIcon icon={amenity.icon} size="lg" />
                 <h5 className="font-light ml-4">{amenity.amenity}</h5>
               </div>
             );
@@ -126,7 +126,7 @@ const Details = () => {
         <h6 className="font-light text-gray-500">Minimum stay: 27 nights</h6>
         <Calender />
         <div className="flex justify-between">
-          <FontAwesomeIcon icon={faKeyboard} size="lg" className="" />
+          <FontAwesomeIcon icon={faKeyboard} size="lg" />
           <h6 className="font-medium">
             <a href="">Clear date</a>
           </h6>

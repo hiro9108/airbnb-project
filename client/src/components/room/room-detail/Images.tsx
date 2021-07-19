@@ -31,7 +31,7 @@ const Images = () => {
             className="w-72 h-48 rounded-lg"
           />
           <div className="show_all_photos">
-            <FontAwesomeIcon icon={faTh} size="sm" className="" />
+            <FontAwesomeIcon icon={faTh} size="sm" />
             <p className="ml-2">Show all photos</p>
           </div>
         </div>

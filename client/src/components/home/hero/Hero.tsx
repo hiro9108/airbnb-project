@@ -1,8 +1,8 @@
 import React from "react";
 import Booking from "../../../pages/booking";
 import Navbar from "../../navbar/Navbar";
-import Search from "./Search";
-import Search2 from "./Search2";
+import Search from "../../search/Search";
+import SearchBar from "../../search/SearchBar";
 
 const Hero = () => {
   return (
@@ -10,7 +10,7 @@ const Hero = () => {
       <Navbar />
       {/* <Search /> */}
       {/* <Booking /> */}
-      <Search2 />
+      <SearchBar />
       <Search />
       <div className="hero_content">
         <div className="mb-6">

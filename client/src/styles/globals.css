@@ -19,6 +19,7 @@
 }
 input[type="date"] {
   position: relative;
+  background-color: white;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -100,7 +101,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     @apply flex justify-center items-center flex-col h-mds;
   }
   .city {
-    overflow-x: hidden !important;
     @apply grid grid-flow-row grid-cols-4 grid-rows-2 gap-4;
   }
   .search {
@@ -164,8 +164,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     @apply flex flex-col;
   }
   .live_section {
-    @apply grid grid-flow-row grid-cols-4 gap-4 
-    overflow-x-scroll;
+    @apply flex
+    /* grid grid-flow-row grid-cols-4 gap-4  */
+    overflow-x-scroll h-48 w-auto;
   }
   .inspire {
     background-image: url("/nature.jpg");

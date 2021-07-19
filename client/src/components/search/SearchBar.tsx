@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { faPlusCircle, faMinusCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import searchIcon from "../../../../public/search-solid.svg";
-import "font-awesome/css/font-awesome.min.css";
 
 import { useForm } from "react-hook-form";
+import { getToday, getTmr } from "../date_picker";
 
 const Search2 = () => {
   const [guest, setGuest] = useState(1);
+
+  const today = getToday();
+  const tmr = getTmr();
+
   const {
     register,
     handleSubmit,
@@ -34,49 +37,51 @@ const Search2 = () => {
         className="s_form"
       >
         <div className="s_input_wrapper pr-12 ">
-          <label className="s_label">Location</label>
+          <label className="s_label" htmlFor="location">
+            Location
+          </label>
           <input
-            {...register("location")}
+            {...register("location", { required: true })}
             className="s_input_placeholder"
             type="text"
             id="location"
             name="location"
             placeholder="Where are you going?"
           />
+          {errors.location && <p>Please enter where you would like to go.</p>}
         </div>
         {/* checkin option */}
         <div className="s_input_wrapper">
-          <label className="s_label">Check in</label>
+          <label className="s_label" htmlFor="checkin">
+            Check in
+          </label>
           <input
             {...register("checkin")}
             className="s_input_placeholder"
             type="date"
             id="checkin"
             name="checkin"
-            placeholder="Add dates"
+            defaultValue={today}
           />
         </div>
         {/* checkout option */}
         <div className="s_input_wrapper">
-          <label className="s_label">Check out</label>
+          <label className="s_label" htmlFor="checkout">
+            Check out
+          </label>
           <input
             {...register("checkout")}
             className="s_input_placeholder"
             type="date"
             id="checkout"
             name="checkout"
-            placeholder="Add dates"
+            defaultValue={tmr}
           />
         </div>
         <div className="s_input_wrapper border-none w-32 ">
-          <label className="s_label">Guest</label>
-          {/* <input
-            className="s_input_placeholder"
-            type="guest"
-            id="guest"
-            name="guest"
-            placeholder="Add guests"
-          /> */}
+          <label className="s_label" htmlFor="guest">
+            Guest
+          </label>
           <div className="flex items-center text-gray-500">
             <FontAwesomeIcon
               icon={faMinusCircle}
@@ -84,7 +89,9 @@ const Search2 = () => {
               onClick={handleMinus}
               className="cursor-pointer"
             />
-            <div className="px-4 text-lg">{guest}</div>
+            <div className="px-4 text-lg" id="guest">
+              {guest}
+            </div>
             <FontAwesomeIcon
               icon={faPlusCircle}
               size="sm"

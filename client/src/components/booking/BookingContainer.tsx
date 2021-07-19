@@ -2,19 +2,11 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { faPlusCircle, faMinusCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { getToday, getTmr } from "../date_picker";
 
 const BookingContainer = () => {
-  let today_d = new Date();
-  today_d.setDate(today_d.getDate());
-  let today = today_d.toISOString().substr(0, 10);
-
-  let tmr_d = new Date();
-  tmr_d.setDate(tmr_d.getDate() + 1);
-  let tmr = tmr_d.toISOString().substr(0, 10);
-
-  // var someDate = new Date();
-  // var numberOfDaysToAdd = 3;
-  // var today = someDate.setDate(someDate.getDate() + numberOfDaysToAdd);
+  const today = getToday();
+  const tmr = getTmr();
 
   const [guest, setGuest] = useState(1);
 
@@ -49,11 +41,9 @@ const BookingContainer = () => {
                 <label className="text-xs" htmlFor="checkin">
                   CHECK-IN
                 </label>
-                {/* <input id="dateRequired" type="date" name="dateRequired"  /> */}
-
                 <input
                   {...register("checkin")}
-                  className="md:w-20 lg:w-32 xl:w-40 bg-white text-sm"
+                  className="md:w-20 lg:w-32 xl:w-40 text-sm"
                   id="checkin today"
                   type="date"
                   name="checkin"

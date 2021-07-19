@@ -2,8 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 
-import { setSearchItem } from "../../../features/searchSlice";
-import "font-awesome/css/font-awesome.min.css";
+import { setSearchItem } from "../../features/searchSlice";
 
 const Search = () => {
   const dispatch = useDispatch();
@@ -28,11 +27,14 @@ const Search = () => {
         onClick={handleSubmit(onSubmit)}
       >
         <input
+          {...register("search", { required: true })}
           onChange={handleSearch}
           className="search_text"
           type="text"
           placeholder="Search"
         />
+        {errors.search && <p>Please enter what you would like to search.</p>}
+
         <input type="submit" value="&#xF002;" className="submit_btn" />
       </form>
     </div>

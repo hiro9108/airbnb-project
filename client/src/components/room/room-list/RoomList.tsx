@@ -9,7 +9,7 @@ const RoomList = () => {
   return (
     <div className="px-10 flex mt-7">
       <div className="w-screen lg:w-sms mr-10">
-        <div className="">
+        <div>
           <p>300+ stays</p>
           <h3 className="font-semibold">Stays in Burnaby</h3>
           <div className="flex flex-wrap ">

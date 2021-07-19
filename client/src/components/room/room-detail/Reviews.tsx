@@ -10,7 +10,7 @@ const Reviews = () => {
         <FontAwesomeIcon icon={faStar} size="sm" className="text-pink" />
         <h5 className="mx-1">4.82</h5>
         <span className="mx-1">・</span>
-        <span className="">17 reviews</span>
+        <span>17 reviews</span>
       </div>
       <ReviewItem />
     </div>
