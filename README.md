@@ -1,6 +1,6 @@
 # Airbnb Project
 
-https://airbnb-project.vercel.app/
+https://airbnb-project.vercel.app
 
 > ## Front End
 
