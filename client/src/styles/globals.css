@@ -164,8 +164,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     @apply flex flex-col;
   }
   .live_section {
-    @apply flex
-    /* grid grid-flow-row grid-cols-4 gap-4  */
+    @apply grid grid-flow-row grid-cols-4 gap-4 
     overflow-x-scroll h-48 w-auto;
   }
   .inspire {
