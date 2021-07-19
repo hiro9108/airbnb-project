@@ -12,7 +12,7 @@ const LiveSelection = () => {
             <img
               src={live.image}
               alt={live.title}
-              className="rounded-lg object-cover"
+              className="rounded-lg w-56 g-56"
             />
             <h4 className="mt-2">{live.title}</h4>
           </div>

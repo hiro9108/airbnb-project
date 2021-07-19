@@ -19,6 +19,7 @@
 }
 input[type="date"] {
   position: relative;
+  background-color: white;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -68,7 +69,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-t border-gray-300 border-solid;
   }
   a {
-    @apply underline;
+    @apply underline text-gray-500;
+  }
+  button {
+    @apply cursor-pointer;
   }
 }
 
@@ -97,7 +101,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     @apply flex justify-center items-center flex-col h-mds;
   }
   .city {
-    overflow-x: hidden !important;
     @apply grid grid-flow-row grid-cols-4 grid-rows-2 gap-4;
   }
   .search {
@@ -150,8 +153,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     text-lg text-center text-white cursor-pointer;
   }
   .check_btn {
-    @apply bg-pink text-lg text-white rounded-lg
-    font-medium w-56 lg:w-72 h-14 cursor-pointer;
+    @apply bg-pink text-base lg:text-lg text-white rounded-lg
+    font-medium w-40 md:w-56 lg:w-72 h-14 cursor-pointer;
   }
   .card_wrapper {
     @apply relative mx-auto overflow-hidden rounded-lg mt-10;
@@ -161,8 +164,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     @apply flex flex-col;
   }
   .live_section {
-    @apply grid grid-flow-row grid-cols-4 gap-4 
-    overflow-x-scroll;
+    @apply flex
+    /* grid grid-flow-row grid-cols-4 gap-4  */
+    overflow-x-scroll h-48 w-auto;
   }
   .inspire {
     background-image: url("/nature.jpg");
@@ -223,5 +227,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   /* room detail page */
   .room_detail {
     @apply mx-10 lg:mx-14 xl:mx-28 my-16;
+  }
+
+  /* availability bar */
+  .availability_bar {
+    @apply fixed bottom-0 md:hidden 
+    bg-white h-20 w-screen
+    border-t border-gray-300 border-solid 
+    flex justify-around items-center;
   }
 }

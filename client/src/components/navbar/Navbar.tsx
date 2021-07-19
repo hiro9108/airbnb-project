@@ -38,11 +38,11 @@ const Navbar = () => {
           <div>
             {!session ? (
               <button onClick={() => signIn("cognito")}>
-                <FontAwesomeIcon icon={faUserCircle} size="lg" className="" />
+                <FontAwesomeIcon icon={faUserCircle} size="lg" />
               </button>
             ) : (
               <button onClick={() => signOut()}>
-                <FontAwesomeIcon icon={faSignOutAlt} size="lg" className="" />
+                <FontAwesomeIcon icon={faSignOutAlt} size="lg" />
               </button>
             )}
           </div>

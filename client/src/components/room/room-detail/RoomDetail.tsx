@@ -2,7 +2,7 @@ import React from "react";
 import Images from "../room-detail/Images";
 import Top from "../room-detail/Top";
 import Details from "../room-detail/Details";
-import BookingContainer from "../booking/BookingContainer";
+import BookingContainer from "../../booking/BookingContainer";
 import Reviews from "../room-detail/Reviews";
 import Map from "../room-detail/Map";
 import Owner from "../room-detail/Owner";
