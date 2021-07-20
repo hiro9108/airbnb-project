@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 const AvailabilityBar = () => {
   return (
@@ -14,7 +15,9 @@ const AvailabilityBar = () => {
         </div>
       </div>
       <div>
-        <button className="check_btn">check availability</button>
+        <Link href={"/booking"}>
+          <button className="check_btn">check availability</button>
+        </Link>
       </div>
     </div>
   );

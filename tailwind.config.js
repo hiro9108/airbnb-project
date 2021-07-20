@@ -38,6 +38,11 @@ module.exports = {
         xxxl: "50rem",
         xxxxl: "90rem",
       },
+      gridTemplateColumns: {
+        city: "repeat(4, minmax(200px, 1fr))",
+        live: "repeat(4, minmax(300px, 1fr))",
+        discover: "repeat(3, minmax(250px, 1fr))",
+      },
     },
     screens: {
       all: "0px",

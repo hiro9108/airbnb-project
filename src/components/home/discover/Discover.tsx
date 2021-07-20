@@ -8,7 +8,7 @@ const Discover = () => {
       <h4 className="mb-10 font-light">
         Unique activities with local experts—in person or online.
       </h4>
-      <div>
+      <div className="overflow-y-hidden">
         <DiscoverSelection />
       </div>
     </section>

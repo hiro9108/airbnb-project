@@ -29,7 +29,7 @@ const BookingContainer = () => {
   };
 
   return (
-    <div className="card_wrapper md:w-64 lg:w-80 xl:w-96 py-6 h-80">
+    <div className="booking">
       <article className="bg-white">
         <div className="flex justify-center">
           <p className="pb-6 font-bold">Booking</p>
@@ -43,7 +43,7 @@ const BookingContainer = () => {
                 </label>
                 <input
                   {...register("checkin")}
-                  className="md:w-20 lg:w-32 xl:w-40 text-sm"
+                  className="w-32 md:w-20 lg:w-32 xl:w-40 text-sm"
                   id="checkin today"
                   type="date"
                   name="checkin"
@@ -56,7 +56,7 @@ const BookingContainer = () => {
                 </label>
                 <input
                   {...register("checkout")}
-                  className="md:w-20 lg:w-32 w-40 bg-white text-sm"
+                  className="w-32 md:w-20 lg:w-32 xl:w-40 bg-white text-sm"
                   id="checkout"
                   type="date"
                   name="checkout"

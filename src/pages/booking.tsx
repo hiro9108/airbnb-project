@@ -7,7 +7,9 @@ const Booking = () => {
   const title = "Airbnb - booking";
   return (
     <Layout description={description} title={title}>
-      <BookingContainer />
+      <div className="my-40">
+        <BookingContainer />
+      </div>
     </Layout>
   );
 };

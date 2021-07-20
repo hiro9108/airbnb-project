@@ -7,7 +7,7 @@ import SearchBar from "../../search/SearchBar";
 const Hero = () => {
   return (
     <div className="hero">
-      <Navbar />
+      <Navbar classNameNavbar="navbar_home" classNameUser="navbar_user_home" />
       {/* <Search /> */}
       {/* <Booking /> */}
       <SearchBar />

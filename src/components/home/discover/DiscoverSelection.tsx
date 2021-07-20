@@ -5,7 +5,7 @@ const DiscoverSelection = () => {
   const discovers = getAllDiscover();
 
   return (
-    <div className="grid grid-flow-row grid-cols-3 gap-4">
+    <div className="discover_section">
       {discovers.map((discover, index) => {
         return (
           <div key={index} className="cursor-pointer">

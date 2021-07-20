@@ -8,7 +8,7 @@ const RoomListPage = () => {
   const title = "";
   return (
     <Layout description={description} title={title}>
-      <Navbar />
+      <Navbar classNameNavbar="navbar_list" classNameUser="navbar_user_list" />
       <RoomList />
     </Layout>
   );

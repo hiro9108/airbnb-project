@@ -5,7 +5,7 @@ const Live = () => {
   return (
     <section>
       <h3 className="font-semibold my-10">Live anywhere</h3>
-      <div>
+      <div className="overflow-y-hidden">
         <LiveSelection />
       </div>
     </section>
