@@ -23,7 +23,7 @@ const Top = () => {
             <span className="hidden md:block mx-3 text-gray-500">・</span>
             <a href="">
               <h6 className="text-sm text-gray-500">
-                Vancouver, British Columbia, Canada Share
+                Vancouver, British Columbia, Canada
               </h6>
             </a>
           </div>

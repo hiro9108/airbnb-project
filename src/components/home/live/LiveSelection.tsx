@@ -9,11 +9,7 @@ const LiveSelection = () => {
       {lives.map((live, index) => {
         return (
           <div key={index} className="cursor-pointer">
-            <img
-              src={live.image}
-              alt={live.title}
-              className="rounded-lg w-56 g-56"
-            />
+            <img src={live.image} alt={live.title} className="rounded-lg" />
             <h4 className="mt-2">{live.title}</h4>
           </div>
         );

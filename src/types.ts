@@ -7,6 +7,11 @@ export type buttonProp = {
   button: string;
 };
 
+export type navbarProp = {
+  classNameNavbar: string;
+  classNameUser: string;
+};
+
 export interface data {
   id: number;
   name: string;

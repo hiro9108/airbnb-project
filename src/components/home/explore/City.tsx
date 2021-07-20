@@ -5,7 +5,7 @@ const City = () => {
   const cities = getAllCities();
 
   return (
-    <div className="city">
+    <div className="city_section">
       {cities.map((city, index) => {
         return (
           <div key={index} className="flex cursor-pointer">

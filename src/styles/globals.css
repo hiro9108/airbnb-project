@@ -78,16 +78,26 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 @layer components {
   /* navbar */
-  .navbar {
+  .navbar_home {
     @apply w-screen h-20 px-8 md:px-16
     flex flex-row justify-between items-center;
+  }
+  .navbar_list {
+    @apply w-screen h-20 px-8 md:px-16
+    flex flex-row justify-between items-center
+    shadow;
   }
   .navbar_menu {
     @apply mx-4 cursor-pointer hover:text-gray-500;
   }
-  .navbar_user {
+  .navbar_user_home {
     @apply relative flex bg-white text-gray-600 
     border border-white border-solid rounded-full
+    px-4 py-2 cursor-pointer;
+  }
+  .navbar_user_list {
+    @apply relative flex bg-white text-gray-600 
+    border border-gray-300 border-solid rounded-full
     px-4 py-2 cursor-pointer;
   }
 
@@ -100,9 +110,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .hero_content {
     @apply flex justify-center items-center flex-col h-mds;
   }
-  .city {
-    @apply grid grid-flow-row grid-cols-4 grid-rows-2 gap-4;
-  }
+
   .search {
     @apply flex;
   }
@@ -163,10 +171,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .input_wrapper {
     @apply flex flex-col;
   }
+  .city_section {
+    @apply grid grid-flow-row grid-cols-city grid-rows-2 gap-4
+    mr-8 md:mr-16 xl:mr-0;
+  }
   .live_section {
-    @apply flex
-    /* grid grid-flow-row grid-cols-4 gap-4  */
-    overflow-x-scroll h-48 w-auto;
+    @apply grid grid-flow-row grid-cols-live gap-4
+    mr-8 md:mr-16 xl:mr-0;
+  }
+  .discover_section {
+    @apply grid grid-flow-row grid-cols-discover gap-4
+    mr-8 md:mr-16 xl:mr-0;
   }
   .inspire {
     background-image: url("/nature.jpg");
@@ -209,7 +224,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     @apply py-4 border-b border-gray-300 border-solid;
   }
   .f_links_wrapper {
-    @apply grid grid-flow-row grid-cols-3 lg:block;
+    @apply md:grid grid-flow-row grid-cols-3 lg:block;
   }
   .f_links {
     @apply text-sm font-light mb-1 lg:mb-4 cursor-pointer;
@@ -220,8 +235,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .footer_nav {
     @apply flex flex-col-reverse lg:flex-row
     justify-around lg:justify-between items-center 
-    text-sm font-light 
-    lg:border-t border-gray-300 border-solid h-20;
+    text-sm font-light h-24 md:h-20
+    lg:border-t border-gray-300 border-solid;
   }
 
   /* room detail page */
@@ -235,5 +250,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     bg-white h-20 w-screen
     border-t border-gray-300 border-solid 
     flex justify-around items-center;
+  }
+
+  /* booking */
+  .booking {
+    @apply card_wrapper w-80 md:w-64 lg:w-80 xl:w-96 py-6 h-80;
   }
 }

@@ -9,11 +9,13 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { signIn, signOut, useSession } from "next-auth/client";
 
-const Navbar = () => {
+import { navbarProp } from "../../types";
+
+const Navbar: React.FC<navbarProp> = ({ classNameNavbar, classNameUser }) => {
   const [session, loading] = useSession();
 
   return (
-    <div className="navbar">
+    <div className={classNameNavbar}>
       <div className="cursor-pointer">
         <Link href="/">
           <img className="w-36" src="/logo2.png" />
@@ -31,7 +33,7 @@ const Navbar = () => {
         <div className="px-4">
           <FontAwesomeIcon icon={faGlobe} size="sm" />
         </div>
-        <div className="navbar_user">
+        <div className={classNameUser}>
           <div className="mr-3 flex items-center">
             <FontAwesomeIcon icon={faBars} size="sm" />
           </div>
