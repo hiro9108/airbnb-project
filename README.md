@@ -23,3 +23,8 @@ https://airbnb-project.vercel.app
   - AWS APP SYNC
 - Database
   - AWS DynamoDB
+
+> ## Tools(Memo)
+
+- Infrastructure as Code
+  - Terraform
