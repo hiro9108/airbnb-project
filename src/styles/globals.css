@@ -215,6 +215,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     grid-cols-2 md:grid-cols-3 lg:grid-cols-4 
     gap-5 mt-5;
   }
+  .bed_card {
+    min-width: 14rem;
+    @apply border border-solid border-gray-300 
+    p-9 w-56 rounded-xl mx-3;
+  }
 
   /* footer */
   .f_link_title {

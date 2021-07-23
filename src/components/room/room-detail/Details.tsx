@@ -1,89 +1,69 @@
 import React from "react";
 import Calender from "./Calender";
-import {
-  faMapMarkerAlt,
-  faKey,
-  faBookmark,
-  faBed,
-  faKeyboard,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBed, faKeyboard } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { getAllAmenities } from "./amenities";
+import { detailProp } from "../../../types";
 
-const Details = () => {
-  const amenities = getAllAmenities();
-
+const Details: React.FC<detailProp> = ({
+  subTitle,
+  highLights,
+  room,
+  icon,
+  additionalInfo,
+  description,
+  bedRoomInfo,
+  amenities,
+  ownerName,
+}) => {
   return (
     <div>
       {/* top part */}
       <div className="flex justify-between mt-10 d_c_section ">
         <div>
-          <h4 className="font-medium">
-            Private room in house hosted by Tatiane
-          </h4>
+          <h4 className="font-medium">{subTitle}</h4>
           <h5 className="font-light">
-            2 guests · 1 bedroom · 1 bed · 1 shared bath
+            {room.maximumGuest} guests · {room.bedroom} · {room.bed} ·{" "}
+            {room.bathroom}
           </h5>
         </div>
         <div>
-          <img
-            src="rooms/person.jpeg"
-            alt="owner"
-            className="rounded-full w-16 h-16"
-          />
+          <img src={icon} alt="owner" className="rounded-full w-16 h-16" />
         </div>
       </div>
 
       {/* second part */}
       <ul className="d_c_section">
-        <li className="flex my-4">
-          <FontAwesomeIcon icon={faMapMarkerAlt} size="lg" />
-          <div className="ml-4">
-            <h5 className="font-medium">Great Location</h5>
-            <p className="text-gray-500">
-              100% of recent guests gave the location a 5-star rating.
-            </p>
-          </div>
-        </li>
-        <li className="flex my-4">
-          <FontAwesomeIcon icon={faKey} size="lg" />
-          <div className="ml-4">
-            <h5 className="font-medium">Great check-in experience</h5>
-            <p className="text-gray-500">
-              100% of recent guests gave the check-in process a 5-star rating.
-            </p>
-          </div>
-        </li>
-        <li className="flex my-3">
-          <FontAwesomeIcon icon={faBookmark} size="lg" />
-          <div className="ml-4">
-            <h5 className="font-medium">Wifi</h5>
-            <p className="text-gray-500">
-              Guests often search for this popular amenity
-            </p>
-          </div>
-        </li>
+        {highLights.map((highlight, index) => {
+          return (
+            <li className="flex my-4" key={index}>
+              <div className="w-12 text-center">
+                <FontAwesomeIcon icon={highlight.icon} size="lg" />
+              </div>
+              <div className="">
+                <h5 className="font-medium">{highlight.title}</h5>
+                <p className="text-gray-500">{highlight.description}</p>
+              </div>
+            </li>
+          );
+        })}
       </ul>
 
       {/* third part */}
-      <div className="flex d_c_section">
-        <span className="mx-3 text-gray-500">・</span>
-        <h5 className="font-light">Committed to Enhanced Clean</h5>
+      <div className=" d_c_section">
+        {additionalInfo.map((info, index) => {
+          return (
+            <div className="flex my-2" key={index}>
+              <span className="mx-3 text-gray-500">・</span>
+              <h5 className="font-light">{info}</h5>
+            </div>
+          );
+        })}
       </div>
 
       {/* forth part */}
       <div className="d_c_section">
-        <h4 className="font-medium mb-6">All about Tatiane’s place</h4>
-        <h6 className="font-light">
-          Located in the heart of downtown on a beautiful residential block on
-          Thurlow street close to Nelson park, Starbucks, and popular
-          attractions. This spacious house is steps away from all the shopping,
-          international cuisines, night life activities downtown and all the
-          amenities that guests need to make Downtown so livable without
-          transportation.. Within a 15 minute walk is the SkyTrain station.
-          Perfect for international travellers or students who want to enjoy
-          Downtown Vancouver....
-        </h6>
+        <h4 className="font-medium mb-6">All about {ownerName}'s place</h4>
+        <h6 className="font-light">{description}</h6>
         <div className="cursor-pointer flex items-center mt-6">
           <a href="" className="mr-2">
             Show more
@@ -95,10 +75,16 @@ const Details = () => {
       {/* fifth part */}
       <div className="d_c_section">
         <h4 className="font-medium mb-6">Places for sleeping</h4>
-        <div className="border border-solid border-gray-300 p-9 w-56 rounded-xl">
-          <FontAwesomeIcon icon={faBed} size="lg" />
-          <h5 className="mt-4 mb-1">Bedroom 1</h5>
-          <h6>1 queen bed</h6>
+        <div className="flex overflow-x-scroll w-xxxl">
+          {bedRoomInfo.map((bedRoom, index) => {
+            return (
+              <div className="bed_card" key={index}>
+                <FontAwesomeIcon icon={faBed} size="lg" />
+                <h5 className="mt-4 mb-1">{bedRoom.bed}</h5>
+                <h6>{bedRoom.type}</h6>
+              </div>
+            );
+          })}
         </div>
       </div>
 
@@ -121,7 +107,7 @@ const Details = () => {
       </div>
 
       {/* seventh part */}
-      <div className="pt-6">
+      <div className="py-6 ">
         <h4 className="font-medium mb-2">Select check-in date</h4>
         <h6 className="font-light text-gray-500">Minimum stay: 27 nights</h6>
         <Calender />

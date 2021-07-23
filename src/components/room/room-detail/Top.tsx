@@ -5,25 +5,28 @@ import {
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { topProp } from "../../../types";
 
-const Top = () => {
+const Top: React.FC<topProp> = ({ name, address, star, reviewCount }) => {
   return (
     <div>
-      <h3>DOWNTOWN Room with Private Bathroom</h3>
+      <h3>{name}</h3>
       <div className="md:flex justify-between items-center my-4">
         <div className="md:flex items-center">
           <div className="flex justify-center items-center">
             <FontAwesomeIcon icon={faStar} size="sm" className="text-pink" />
-            <h6 className="mx-1">4.82</h6>
+            <h6 className="mx-1">{star}</h6>
             <a href="">
-              <span className="text-sm text-gray-500">(17 reviews)</span>
+              <span className="text-sm text-gray-500">
+                ({reviewCount} reviews)
+              </span>
             </a>
           </div>
           <div className="flex justify-center items-center">
             <span className="hidden md:block mx-3 text-gray-500">・</span>
             <a href="">
               <h6 className="text-sm text-gray-500">
-                Vancouver, British Columbia, Canada
+                {address.city}, {address.province}, {address.country}
               </h6>
             </a>
           </div>
