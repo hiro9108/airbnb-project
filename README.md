@@ -9,6 +9,7 @@ https://airbnb-project.vercel.app
   - Next.js
   - TypeScript
   - Redux(toolkit)
+  - Apollo Client(GraphQL Client)
 
 - CSS Framework
   - TailwindCSS
@@ -16,18 +17,14 @@ https://airbnb-project.vercel.app
 
 > ## Back End
 
-- Node.js
-  - Express
-- Database
-  - MongoDB
-- Query Language
-  - RESTful API or GraphQL
-
-> ## Memo with Miyu
-
 - Authentication
+  - AWS Cognito
+- GraphQL Server
+  - AWS APP SYNC
+- Database
+  - AWS DynamoDB
 
-  - JWT Token
+> ## Tools(Memo)
 
-- Database Design for Reservation system
-  - NoSQL database design
+- Infrastructure as Code
+  - Terraform
