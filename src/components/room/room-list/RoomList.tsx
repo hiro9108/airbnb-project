@@ -1,17 +1,22 @@
 import React from "react";
+import { useSelector } from "react-redux";
+
 import { getAllSelections } from "./room-list-data";
 import { faTrophy } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import RoomItem from "./RoomItem";
+import RoomListItem from "./RoomListItem";
+import { selectSearchItem } from "../../../features/searchSlice";
 
 const RoomList = () => {
   const selections = getAllSelections();
+  const searchItem = useSelector(selectSearchItem);
+
   return (
     <div className="px-10 flex mt-7">
       <div className="w-screen lg:w-sms mr-10">
         <div>
           <p>300+ stays</p>
-          <h3 className="font-semibold">Stays in Burnaby</h3>
+          <h3 className="font-semibold">Stays in {searchItem}</h3>
           <div className="flex flex-wrap ">
             {selections.map((selection, index) => {
               return (
@@ -32,15 +37,13 @@ const RoomList = () => {
         <div className="border-b border-t -300 border-solid flex py-7">
           <FontAwesomeIcon icon={faTrophy} size="lg" className="text-pink" />
           <h6 className="font-medium mx-2">
-            More than 35,000 guests have stayed in Burnaby.
+            More than 35,000 guests have stayed in {searchItem}.
           </h6>
           <h6 className="font-light">
             On average they rated their stays 4.7 out of 5 stars.
           </h6>
         </div>
-        <RoomItem />
-        <RoomItem />
-        <RoomItem />
+        <RoomListItem searchItem={searchItem} />
       </div>
       <div className="gmap w-xss right-0 hidden lg:block">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14314.98879913607!2d-123.12164308222374!3d49.2833606067369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486719d24e2e021%3A0xb7057fe085c86109!2sCanada%20Place!5e0!3m2!1sen!2sca!4v1626242090019!5m2!1sen!2sca"></iframe>

@@ -1,10 +1,11 @@
 import React from "react";
-import { getAllHealths, getAllRules } from "./things-data";
+import { thingsProp } from "../../../types";
 
-const ThingsKnow = () => {
-  const rules = getAllRules();
-  const healths = getAllHealths();
-
+const ThingsKnow: React.FC<thingsProp> = ({
+  rules,
+  healthInfo,
+  cancelPolicy,
+}) => {
   return (
     <div className="d_c_section">
       <h4 className="font-medium mb-6">Things to know</h4>
@@ -16,7 +17,7 @@ const ThingsKnow = () => {
               return (
                 <li className="font-light my-2" key={index}>
                   <span>・</span>
-                  {rule.title}
+                  {rule}
                 </li>
               );
             })}
@@ -31,11 +32,11 @@ const ThingsKnow = () => {
         <div className="mb-3">
           <h5 className="mb-5 font-medium">Health & safety</h5>
           <ul>
-            {healths.map((health, index) => {
+            {healthInfo.map((health, index) => {
               return (
                 <li className="font-light my-2" key={index}>
                   <span>・</span>
-                  {health.title}
+                  {health}
                 </li>
               );
             })}
@@ -49,9 +50,7 @@ const ThingsKnow = () => {
         </div>
         <div>
           <h5 className="mb-5 font-medium">Cancellation policy</h5>
-          <h5 className="font-light">
-            Add your trip dates to get the cancellation details for this stay.
-          </h5>
+          <h5 className="font-light">{cancelPolicy} </h5>
           <div className="cursor-pointer flex items-center mt-6">
             <a href="" className="mr-2">
               Add dates
