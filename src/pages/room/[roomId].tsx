@@ -10,6 +10,8 @@ const RoomDetailPage = () => {
   const roomId = router.query.roomId;
   const room = getRoomById(roomId);
 
+  console.log("room in RoomDetailPage", room);
+
   return (
     <div>
       <RoomDetail room={room} />
