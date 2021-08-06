@@ -1,0 +1,115 @@
+"id": "r1",
+"name": "Clean Room with Private Bathroom",
+"subTitle": "Entire guest suits in Vancouver",
+"star": 4.82,
+"reviewCount": 17,
+"images": [
+  "https://images.unsplash.com/photo-1560184897-67f4a3f9a7fa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGxpdmluZ3xlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+  "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVkcm9vbXxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+  "https://images.unsplash.com/photo-1574643156929-51fa098b0394?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YmVkcm9vbXxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+  "https://images.unsplash.com/photo-1574739782594-db4ead022697?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8a2l0Y2hlbnxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+  "https://images.unsplash.com/photo-1584069793933-57852d7060ea?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8YmF0aHJvb218ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+],
+"address": {
+  "country": "Canada",
+  "province": "British Columbia",
+  "city": "Vancouver"
+},
+"map": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13238.304303826317!2d-123.13415615419888!3d49.28492026327771!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486717f45186a3f%3A0x26cdaebfb6f46250!2sCF%20Pacific%20Centre!5e0!3m2!1sen!2sca!4v1626931493346!5m2!1sen!2sca",
+"room": {
+  "maximumGuest": 2,
+  "bedroom": "1 bedroom",
+  "bed": "1 bed",
+  "bathroom": "1 shared bath"
+},
+"highLights": [
+  {
+    "icon": "faMapMarkerAlt",
+    "title": "Great Location",
+    "description": "100% of recent guests gave the location a 5-star rating."
+  },
+  {
+    "icon": "faKey",
+    "title": "Great check-in experience",
+    "description": "100% of recent guests gave the check-in process a 5-star rating."
+  },
+  {
+    "icon": "faBookmark",
+    "title": "Wifi",
+    "description": "Guests often search for this popular amenity"
+  }
+],
+"additionalInfo": ["Committed to Enhanced Clean"],
+"description": "Located in the heart of downtown on a beautiful residential block on Thurlow street close to Nelson park, Starbucks, and popular attractions. This spacious house is steps away from all the shopping, international cuisines, night life activities downtown and all the amenities that guests need to make Downtown so livable without transportation.. Within a 15 minute walk is the SkyTrain station. Perfect for international travellers or students who want to enjoy Downtown Vancouver....",
+"bedRoomInfo": [
+  {
+    "bed": "Bedroom 1",
+    "type": "1 queen bed"
+  }
+],
+"amenities": [
+  {
+    "amenity": "Kitchen",
+    "icon": "faUtensils"
+  },
+  {
+    "amenity": "Wifi",
+    "icon": "faWifi"
+  },
+  {
+    "amenity": "Free street parking",
+    "icon": "faParking"
+  },
+  {
+    "amenity": "TV",
+    "icon": "faTv"
+  }
+],
+"rules": [
+  "Check-in: After 3:00 p.m.",
+  "Checkout: 10:00 a.m.",
+  "Not suitable for children and infants",
+  "No smoking",
+  "No pets",
+  "No parties or events"
+],
+"healthInfo": [
+  "Committed to Airbnb's enhanced cleaning process.",
+  "Airbnb's social-distancing and other COVID-19-related guidelines apply",
+  "Carbon monoxide alarm",
+  "Smoke alarm"
+],
+"cancelPolicy": "Add your trip dates to get the cancellation details for this stay.",
+"reviews": [
+  {
+    "date": "July 2021",
+    "comment": "It was an amazing experience, the house is right in the centre of all the downtown action. The place is clean. Tatiane is super friendly and easy to communicate with.",
+    "userId": "u1"
+  },
+  {
+    "date": "April 2021",
+    "comment": "Great location, near lots of restaurants. The host is very responsive and comes by often to clean. Great stay!",
+    "userId": "u2"
+  },
+  {
+    "date": "January 2021",
+    "comment": "Awseome great everything was as to be expected",
+    "userId": "u3"
+  },
+  {
+    "date": "October 2020",
+    "comment": "It was very nice stay",
+    "userId": "u4"
+  },
+  {
+    "date": "May 2021",
+    "comment": "A really cute stay. It was very clean and really close to many places in downtown.",
+    "userId": "u5"
+  },
+  {
+    "date": "July 2021",
+    "comment": "Fantastic place to stay in VC, very close to a lot of amenities.",
+    "userId": "u6"
+  }
+],
+"ownerId": "o1"
