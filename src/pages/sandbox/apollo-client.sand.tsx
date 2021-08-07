@@ -7,12 +7,27 @@ const ApolloClientDemo = () => {
     client
       .query({
         query: gql`
-          query list {
-            listMyCustomTypes {
+          query listHotelTables {
+            listHotelTables {
               items {
                 id
-                title
-                content
+                name
+                subTitle
+                reviewCount
+                images
+                address
+                map
+                room
+                highLights
+                additionalInfo
+                description
+                bedRoomInfo
+                amenities
+                rules
+                healthInfo
+                cancelPolicy
+                reviews
+                ownerId
               }
             }
           }
