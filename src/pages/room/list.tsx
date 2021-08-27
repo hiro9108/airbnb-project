@@ -4,8 +4,9 @@ import Layout from "../../components/layout";
 import Navbar from "../../components/navbar/Navbar";
 
 const RoomListPage = () => {
-  const description = "";
-  const title = "";
+  const description =
+    "An airbnb clone application. We made this to study new technologies such as GraphQL, Appllo Client, and AWS database.";
+  const title = "Airbnb - List";
 
   return (
     <Layout description={description} title={title}>
