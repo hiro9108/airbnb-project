@@ -49,7 +49,7 @@ const BookingContainer: React.FC<{ roomData?: roomProp }> = ({ roomData }) => {
       }).then((result) => {
         if (result.isConfirmed) {
           signIn("cognito", {
-            callbackUrl: "https://airbnb-project.vercel.app",
+            callbackUrl: "https://airbnb-project.vercel.app/",
           });
         }
       });
