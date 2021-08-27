@@ -33,7 +33,7 @@ const ApolloClientDemo = () => {
           }
         `,
       })
-      .then((result) => console.log(result))
+      .then((result) => console.log(result.data.listHotelTables.items))
       .catch((err) => console.log(err));
   }, []);
 

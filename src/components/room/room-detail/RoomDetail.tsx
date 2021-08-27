@@ -52,7 +52,7 @@ const RoomDetail: React.FC<roomProp> = (props) => {
               />
             </div>
             <div className="hidden md:block w-xss">
-              <BookingContainer />
+              <BookingContainer roomData={props} />
             </div>
           </div>
           <Reviews
