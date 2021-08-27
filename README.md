@@ -15,8 +15,14 @@ An airbnb clone application. We made this to study new technologies such as Grap
   - Apollo Client(GraphQL Client)
 
 - CSS Framework
+
   - TailwindCSS
   - (Install emotion for using vanila css)
+
+- React Framework
+  - React Calender
+  - React Hook Form
+  - React Tabs
 
 ### Back End
 

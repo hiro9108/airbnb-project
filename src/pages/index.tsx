@@ -10,8 +10,9 @@ import Layout from "../components/layout";
 import Gateway from "../components/home/gateway/Gateway";
 
 export default function Home() {
-  const description: string = "Airbon home page";
-  const title = "Airbnb home page";
+  const description =
+    "An airbnb clone application. We made this to study new technologies such as GraphQL, Appllo Client, and AWS database.";
+  const title = "Airbnb - Home";
 
   return (
     <Layout description={description} title={title}>

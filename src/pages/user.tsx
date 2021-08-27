@@ -4,8 +4,9 @@ import Signup from "../components/user/Signup";
 import Signin from "../components/user/Signin";
 
 const user = () => {
-  const description = "";
-  const title = "Airbnb - sign up";
+  const description =
+    "An airbnb clone application. We made this to study new technologies such as GraphQL, Appllo Client, and AWS database.";
+  const title = "Airbnb - Sign up";
 
   return (
     <Layout description={description} title={title}>
