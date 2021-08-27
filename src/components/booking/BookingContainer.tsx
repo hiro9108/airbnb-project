@@ -13,7 +13,7 @@ import {
 } from "../../pages/api/apollo-user-data";
 import { roomProp } from "../../types";
 
-const BookingContainer: React.FC<{ roomData: roomProp }> = ({ roomData }) => {
+const BookingContainer: React.FC<{ roomData?: roomProp }> = ({ roomData }) => {
   console.log("BookingContainer", roomData);
   const today = getToday();
   const tmr = getTmr();
