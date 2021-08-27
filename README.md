@@ -37,3 +37,11 @@ An airbnb clone application. We made this to study new technologies such as Grap
 
 - Infrastructure as Code
   - Terraform
+
+
+> ## System Overview
+
+![system-overview](https://user-images.githubusercontent.com/70537611/131147019-bea74d6e-5060-4922-bf8f-616b61c2b097.png)
+
+
+
