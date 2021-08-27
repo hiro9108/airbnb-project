@@ -1,8 +1,11 @@
-# Airbnb Project
+# Airbnb Clone Project
 
 https://airbnb-project.vercel.app
 
-> ## Front End
+> ## ABOUT
+An airbnb clone application. We made this to study new technologies such as GraphQL, Appllo Client, and AWS database.
+
+### Front End
 
 - React
 
@@ -12,10 +15,16 @@ https://airbnb-project.vercel.app
   - Apollo Client(GraphQL Client)
 
 - CSS Framework
+
   - TailwindCSS
   - (Install emotion for using vanila css)
 
-> ## Back End
+- React Framework
+  - React Calender
+  - React Hook Form
+  - React Tabs
+
+### Back End
 
 - Authentication
   - AWS Cognito
@@ -24,7 +33,7 @@ https://airbnb-project.vercel.app
 - Database
   - AWS DynamoDB
 
-> ## Tools(Memo)
+### Tools(Memo)
 
 - Infrastructure as Code
   - Terraform

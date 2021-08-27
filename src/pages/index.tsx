@@ -16,8 +16,9 @@ import { GET_ALL_USER, CREATE_USER } from "../pages/api/apollo-user-data";
 import { useSession } from "next-auth/client";
 
 export default function Home() {
-  const description: string = "Airbon home page";
-  const title = "Airbnb home page";
+  const description =
+    "An airbnb clone application. We made this to study new technologies such as GraphQL, Appllo Client, and AWS database.";
+  const title = "Airbnb - Home";
 
   const [session, sessionLoading] = useSession();
 
