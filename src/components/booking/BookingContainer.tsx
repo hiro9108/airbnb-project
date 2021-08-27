@@ -48,7 +48,9 @@ const BookingContainer: React.FC<{ roomData?: roomProp }> = ({ roomData }) => {
         cancelButtonText: "Cancel",
       }).then((result) => {
         if (result.isConfirmed) {
-          signIn("cognito", { callbackUrl: "http://localhost:3000" });
+          signIn("cognito", {
+            callbackUrl: process.env.NEXT_PUBLIC_CALLBACK_URL,
+          });
         }
       });
     } else {
