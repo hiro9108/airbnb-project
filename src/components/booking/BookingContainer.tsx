@@ -1,21 +1,119 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/router";
+import { signIn, useSession } from "next-auth/client";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 import { faPlusCircle, faMinusCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { getToday, getTmr } from "../date_picker";
+import { useQuery, useMutation } from "@apollo/client";
+import {
+  GET_ALL_USER,
+  UPDATE_RESERVATION_DATA,
+} from "../../pages/api/apollo-user-data";
+import { roomProp } from "../../types";
 
-const BookingContainer = () => {
+const BookingContainer: React.FC<{ roomData: roomProp }> = ({ roomData }) => {
+  console.log("BookingContainer", roomData);
   const today = getToday();
   const tmr = getTmr();
 
+  const [userData, setUserData] = useState(null);
   const [guest, setGuest] = useState(1);
+  const [session, sessionLoading] = useSession();
+  const router = useRouter();
+  // const [createUser, { data, loading, error }] = useMutation(CREATE_USER);
+  const guestRef = useRef(null);
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
+  console.log("session", session);
+
+  const response = useQuery(GET_ALL_USER);
+
+  console.log("response", response);
+
+  const [updateRoomData, { data, loading, error }] = useMutation(
+    UPDATE_RESERVATION_DATA
+  );
+
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = ({ checkin, checkout }) => {
+    if (!session) {
+      Swal.fire({
+        title: "Are you sure?",
+        text: "Do you want to move to Login?",
+        icon: "info",
+        showCancelButton: true,
+        confirmButtonText: "Yes",
+        cancelButtonText: "Cancel",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          signIn("cognito", { callbackUrl: "http://localhost:3000" });
+        }
+      });
+    } else {
+      Swal.fire({
+        title: "Are you sure?",
+        text: "Do you want to make a reservation?",
+        icon: "info",
+        showCancelButton: true,
+        confirmButtonText: "Confirm",
+        cancelButtonText: "Cancel",
+      })
+        .then((result) => {
+          if (result.isConfirmed) {
+            console.log(
+              "confirm useQuery",
+              response.data.listHotelUserTables.items
+            );
+            if (!response.data.listHotelUserTables.items) {
+              updateRoomData({
+                variables: {
+                  userId: session.sub,
+                  roomId: [
+                    {
+                      checkin,
+                      checkout,
+                      guest: guestRef.current.innerText,
+                    },
+                  ],
+                },
+              });
+            } else {
+              if (response.data.listHotelUserTables.items[0].roomId) {
+                updateRoomData({
+                  variables: {
+                    userId: session.sub,
+                    roomId: [
+                      ...response.data.listHotelUserTables.items[0].roomId,
+                      {
+                        checkin,
+                        checkout,
+                        guest: guestRef.current.innerText,
+                      },
+                    ],
+                  },
+                });
+              } else {
+                updateRoomData({
+                  variables: {
+                    userId: session.sub,
+                    roomId: [
+                      {
+                        checkin,
+                        checkout,
+                        guest: guestRef.current.innerText,
+                      },
+                    ],
+                  },
+                });
+              }
+            }
+          }
+        })
+        .catch((err) => console.log("Cannot register", err));
+    }
+  };
 
   const handleMinus = () => {
     if (guest === 1) return;
@@ -76,7 +174,7 @@ const BookingContainer = () => {
                   className="cursor-pointer"
                 />
                 <div className="px-4 text-lg" id="guest">
-                  {guest}
+                  <span ref={guestRef}>{guest}</span>
                 </div>
                 <FontAwesomeIcon
                   icon={faPlusCircle}

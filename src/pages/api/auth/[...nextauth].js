@@ -14,14 +14,21 @@ export default NextAuth({
       if (account?.accessToken) {
         token.accessToken = account.accessToken;
         token.idToken = account.idToken;
+        token.sub = account.id;
       }
       return token;
     },
     async session(session, token) {
       session.accessToken = token.accessToken;
       session.idToken = token.idToken;
+      session.sub = token.sub;
 
       return session;
     },
+  },
+  session: {
+    jwt: true,
+    maxAge: 60,
+    // updateAge: 24 * 60 * 60,
   },
 });
